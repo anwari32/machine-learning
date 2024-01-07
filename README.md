@@ -1,2 +1,2 @@
 # neural-network
-Learning neural network
+How does neural network work?
