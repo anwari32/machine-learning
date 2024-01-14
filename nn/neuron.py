@@ -1,15 +1,20 @@
-from value import Value
+from nn.value import Value
+from nn.activation_functions import tanh, dtanh
+
 
 class Neuron:
-    def __init__(self, inputs: Value, weights: Value, bias: Value):
-        self.inputs = inputs
-        self.weights = weights
-        self.bias = bias
-        self.outputs = None
-
+    def __init__(self, inputs: float, weights: Value, bias: Value, activation=tanh):
+        self.inputs: Value = inputs
+        self.weights: Value = weights
+        self.bias: Value = bias
+        self.activation = activation
+        self.outputs: Value = None
 
     def forward(self):
         self.outputs = self.inputs * self.weights + self.bias
+        self.outputs = self.activation(self.outputs)
+
+
 
     
 if __name__ == "__main__":

@@ -5,6 +5,7 @@ class Value:
         self.operator = _op
         self.label = _label
         self.grad = 0
+        self.compute_order = 0
     
     def __repr__(self):
         return f"{self.__class__}(data={self.data})"
