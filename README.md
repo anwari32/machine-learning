@@ -1,2 +1,2 @@
-# neural-network
-How does neural network work?
+# machine-learning
+How does machine learning work?
